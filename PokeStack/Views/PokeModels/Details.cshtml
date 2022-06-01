@@ -1,0 +1,89 @@
+﻿@model PokeStack.Models.PokeModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PokeModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            <!--@Html.DisplayNameFor(model => model.pokeName)-->
+            Name
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.pokeName)
+        </dd>
+        <dt class = "col-sm-2">
+            <!--@Html.DisplayNameFor(model => model.type1)-->
+            Type 1
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.type1)
+        </dd>
+        <dt class = "col-sm-2">
+            <!--@Html.DisplayNameFor(model => model.type2)-->
+            Type 2
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.type2)
+        </dd>
+        <dt class = "col-sm-2">
+            <!--@Html.DisplayNameFor(model => model.hp)-->
+            HP
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.hp)
+        </dd>
+        <dt class = "col-sm-2">
+            <!--@Html.DisplayNameFor(model => model.atk)-->
+            Attack
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.atk)
+        </dd>
+        <dt class = "col-sm-2">
+            <!--@Html.DisplayNameFor(model => model.def)-->
+            Defense
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.def)
+        </dd>
+        <dt class = "col-sm-2">
+            <!--@Html.DisplayNameFor(model => model.spA)-->
+            Special Attack
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.spA)
+        </dd>
+        <dt class = "col-sm-2">
+            <!--@Html.DisplayNameFor(model => model.spD)-->
+            Special Defense
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.spD)
+        </dd>
+        <dt class = "col-sm-2">
+            <!--@Html.DisplayNameFor(model => model.spe)-->
+            Speed
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.spe)
+        </dd>
+        <dt class = "col-sm-2">
+            <!--@Html.DisplayNameFor(model => model.imageUrl)-->
+            Image Url
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.imageUrl)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+<img src = @Model.imageUrl />

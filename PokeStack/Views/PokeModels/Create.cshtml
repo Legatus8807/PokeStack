@@ -1,0 +1,80 @@
+﻿@model PokeStack.Models.PokeModelVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>PokeModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="pokeNameVM" class="control-label">Name of Pokemon</label>
+                <input asp-for="pokeNameVM" class="form-control" />
+                <span asp-validation-for="pokeNameVM" class="text-danger"></span>
+            </div>
+            <!---
+            <div class="form-group">
+                <label asp-for="type1" class="control-label"></label>
+                <input asp-for="type1" class="form-control" />
+                <span asp-validation-for="type1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="type2" class="control-label"></label>
+                <input asp-for="type2" class="form-control" />
+                <span asp-validation-for="type2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hp" class="control-label"></label>
+                <input asp-for="hp" class="form-control" />
+                <span asp-validation-for="hp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="atk" class="control-label"></label>
+                <input asp-for="atk" class="form-control" />
+                <span asp-validation-for="atk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="def" class="control-label"></label>
+                <input asp-for="def" class="form-control" />
+                <span asp-validation-for="def" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="spA" class="control-label"></label>
+                <input asp-for="spA" class="form-control" />
+                <span asp-validation-for="spA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="spD" class="control-label"></label>
+                <input asp-for="spD" class="form-control" />
+                <span asp-validation-for="spD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="spe" class="control-label"></label>
+                <input asp-for="spe" class="form-control" />
+                <span asp-validation-for="spe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="imageUrl" class="control-label"></label>
+                <input asp-for="imageUrl" class="form-control" />
+                <span asp-validation-for="imageUrl" class="text-danger"></span>
+            </div>
+            -->
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
